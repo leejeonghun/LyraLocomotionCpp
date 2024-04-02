@@ -14,11 +14,6 @@
 #include "AnimExecutionContextLibrary.h"
 #include "KismetAnimationLibrary.h"
 
-void ULLAnimInstance::NativeInitializeAnimation()
-{
-	Super::NativeInitializeAnimation();
-}
-
 void ULLAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 {
 	Super::NativeUpdateAnimation(DeltaSeconds);

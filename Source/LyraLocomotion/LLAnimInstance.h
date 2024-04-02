@@ -14,7 +14,6 @@ class LYRALOCOMOTION_API ULLAnimInstance : public UAnimInstance
 	GENERATED_BODY()
 
 public:
-	virtual void NativeInitializeAnimation() override;
 	virtual void NativeUpdateAnimation(float DeltaSeconds) override;
 	virtual void NativeThreadSafeUpdateAnimation(float DeltaSeconds) override;
 
@@ -270,19 +269,19 @@ private:
 	FVector PrevWorldLocation { 0 };
 
 	// Rotation Data
-	float YawDeltaSinceLastUpdate = 0.f;
+	float YawDeltaSinceLastUpdate = 0;
 	
 	// Turn In Place
-	float TurnYawCurveValue = 0.f;
-	float TurnInPlaceRotationDirection = 0.f;
-	float TurnInPlaceRecoveryDirection = 0.f;
+	float TurnYawCurveValue = 0;
+	float TurnInPlaceRotationDirection = 0;
+	float TurnInPlaceRecoveryDirection = 0;
 	FRotator PrevWorldRotation;
 	FVector2D RootYawOffsetAngleClamp { -120, 100 };
 	FFloatSpringState RootYawOffsetSpringState;
 	ERootYawOffsetMode RootYawOffsetMode;
 
 	// Idle Breaks
-	float IdleBreakDelayTime = 0.f;
+	float IdleBreakDelayTime = 0;
 	uint8 CurrentIdleBreakIndex = 0;
 
 	// Settings
@@ -302,9 +301,6 @@ private:
 	ECardinalDirection PivotInitialDirection;
 	ECardinalDirection CardinalDirectionFromAcceleration;
 	
-	// Character State Data
-
-
 	// Pivots
 	float TimeAtPivotStop = 0;
 
